@@ -25,7 +25,7 @@ time_bound = input("Is it time-bound? (yes/no):")
 #             f"Note: {task} {priority} priority task. Consider completing it when you have free time.")
 
 
-match priority.lower():
+match priority:
     case "high" | "medium" | "low":
         if time_bound.lower() == "yes":
             print(
