@@ -28,7 +28,7 @@ temperature_type = input(
     "Is this temperature in Celsius or Fahrenheit? (C/F): ")
 
 if temperature_type == "C":
-    fahrenheit = CELSIUS_TO_FAHRENHEIT_FACTOR * user_input + 32
+    fahrenheit = (CELSIUS_TO_FAHRENHEIT_FACTOR * user_input) + 32
     print(f"{user_input}°C is {fahrenheit:}°F")
 elif temperature_type == "F":
     celsius = (user_input - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
