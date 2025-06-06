@@ -30,8 +30,8 @@ def convert_to_celsius(temp_fahrenheit):
 
 
 def convert_to_fahrenheit(temp_celsius):
-    fahrenheit = (CELSIUS_TO_FAHRENHEIT_FACTOR * temp_celsius) + 32
-    return fahrenheit
+    global CELSIUS_TO_FAHRENHEIT_FACTOR
+    return (CELSIUS_TO_FAHRENHEIT_FACTOR * temp_celsius) + 32
 
 
 user_input = float(input("Enter the temperature to convert: "))
