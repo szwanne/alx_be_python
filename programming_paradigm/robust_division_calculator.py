@@ -10,4 +10,4 @@ def safe_divide(numerator, denominator):
         print("Error: Cannot divide by zero.")
         return None
     else:
-        print(f"The result of the division is {result:.1f}")
+        f"The result of the division is {result:.1f}"
