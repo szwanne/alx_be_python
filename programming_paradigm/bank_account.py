@@ -1,6 +1,6 @@
 # Creating a class called BankAccount and initializing the account_balance
 class BankAccount:
-    def __init__(self, account_balance):
+    def __init__(self, account_balance=0):
         self.account_balance = account_balance
 # Amount to be deposited into the bank
 
