@@ -1,18 +1,44 @@
-from book_class import Book
+from library_system import Book as LibraryBook, EBook, PrintBook, Library
+from book_class import Book as StandaloneBook
 
 
 def main():
-    # Creating an instance of Book
-    my_book = Book("1984", "George Orwell", 1949)
+    # Creating an instance of Book from book_class.py
+    my_book = StandaloneBook("1984", "George Orwell", 1949)
 
     # Demonstrating the __str__ method
-    print(my_book)  # Expected to use __str__
+    print(my_book)  # Expected: 1984 by George Orwell, published in 1949
 
     # Demonstrating the __repr__ method
-    print(repr(my_book))  # Expected to use __repr__
+    print(repr(my_book))  # Expected: Book('1984', 'George Orwell', 1949)
 
     # Deleting a book instance to trigger __del__
     del my_book
+
+
+if __name__ == "__main__":
+    main()
+
+
+def main():
+    # Creating an instance of Book from book_class.py
+    my_book = StandaloneBook("1984", "George Orwell", 1949)
+    print(my_book)
+    print(repr(my_book))
+    del my_book
+
+    # Creating library and books using library_system.Book
+    my_library = Library()
+
+    classic_book = LibraryBook("Pride and Prejudice", "Jane Austen")
+    digital_novel = EBook("Snow Crash", "Neal Stephenson", 500)
+    paper_novel = PrintBook("The Catcher in the Rye", "J.D. Salinger", 234)
+
+    my_library.add_book(classic_book)
+    my_library.add_book(digital_novel)
+    my_library.add_book(paper_novel)
+
+    my_library.list_books()
 
 
 if __name__ == "__main__":

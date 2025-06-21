@@ -29,3 +29,13 @@ class Book:
         Returns an official string representation that can recreate the object.
         """
         return f"Book('{self.title}', '{self.author}', {self.year})"
+
+    def __del__(self):
+        """
+        Destructor that prints a message when the book object is deleted.
+        Protects against attribute access errors during interpreter shutdown.
+        """
+        try:
+            print(f"Deleting {self.title}")
+        except AttributeError:
+            print("Deleting Book instance")
