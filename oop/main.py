@@ -1,3 +1,5 @@
+import math
+from polymorphism_demo import Shape, Rectangle, Circle
 from library_system import Book as LibraryBook, EBook, PrintBook, Library
 from book_class import Book as StandaloneBook
 
@@ -39,6 +41,20 @@ def main():
     my_library.add_book(paper_novel)
 
     my_library.list_books()
+
+
+if __name__ == "__main__":
+    main()
+
+
+def main():
+    shapes = [
+        Rectangle(10, 5),
+        Circle(7)
+    ]
+
+    for shape in shapes:
+        print(f"The area of the {shape.__class__.__name__} is: {shape.area()}")
 
 
 if __name__ == "__main__":
